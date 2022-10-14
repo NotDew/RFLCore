@@ -1,0 +1,12 @@
+name: RFLCore
+version: '${project.version}'
+main: me.notdew.com.rflcore.RFLCore
+api-version: 1.18
+description: Core For Regulated Football League | Copyrighted by NotDew 2022
+commands:
+  qbmode:
+  field:
+  roster:
+  game:
+  ballcam:
+  startgame:
