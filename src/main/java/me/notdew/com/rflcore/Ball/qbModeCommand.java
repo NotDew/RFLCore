@@ -9,7 +9,11 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
+
 public class qbModeCommand implements CommandExecutor {
+
+    public static ArrayList<Player> inqbmode= new ArrayList<Player>();
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {

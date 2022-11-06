@@ -1,5 +1,6 @@
 package me.notdew.com.rflcore.Game;
 
+import com.sk89q.worldedit.math.Vector3;
 import me.notdew.com.rflcore.Field.FieldCommand;
 import me.notdew.com.rflcore.Field.FieldObject;
 import me.notdew.com.rflcore.RFLCore;
@@ -7,7 +8,9 @@ import me.notdew.com.rflcore.Roster.RosterCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
+import org.bukkit.World;
 import org.bukkit.entity.Player;
+import org.bukkit.util.Vector;
 
 import java.util.List;
 import java.util.UUID;
@@ -55,6 +58,40 @@ public class GameObject {
                 }
             }
         }
+        Vector3 centers = fo.getRegion().getCenter();
+
+        Vector center = new Vector(centers.getBlockX(), centers.getBlockY(), centers.getBlockZ());
+        Vector cap1loc = center;
+        Vector cap2loc = center;
+        if (fo.getDirection().equals("S")) {
+            // + Z
+            cap1loc.setZ(center.getBlockZ() + 3);
+            cap2loc.setZ(center.getBlockZ() - 3);
+
+        } else if (fo.getDirection().equals("W")) {
+            // - X
+            cap1loc.setX(center.getBlockX() + 3);
+            cap2loc.setX(center.getBlockX() - 3);
+
+        } else if (fo.getDirection().equals("N")) {
+            // - Z
+            cap1loc.setZ(center.getBlockZ() + 3);
+            cap2loc.setZ(center.getBlockZ() - 3);
+
+        } else if (fo.getDirection().equals("E")) {
+            // + X
+            cap1loc.setX(center.getBlockX() + 3);
+            cap2loc.setX(center.getBlockX() - 3);
+
+        }
+        cap1.teleport(cap1loc.toLocation((World) fo.getRegion().getWorld()));
+        cap2.teleport(cap2loc.toLocation((World) fo.getRegion().getWorld()));
+
+
+
+
+
+
         admin.sendMessage(cap1.getName() + "|" + cap2.getName());
 
 

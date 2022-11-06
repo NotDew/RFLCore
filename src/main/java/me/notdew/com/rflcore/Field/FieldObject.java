@@ -25,6 +25,8 @@ public class FieldObject {
     String dir;
     String name;
 
+    public CuboidRegion getRegion() {return region;}
+
 
     public CuboidRegion getAway() {
         if (e1.equals("away") || e2.equals("away")) {
@@ -79,6 +81,8 @@ public class FieldObject {
         }
 
     }
+    public String getDirection() {return dir;}
+
     public void getDir() {
         float yaw = p.getLocation().getYaw();
         yaw = (yaw % 360 + 360) % 360;
