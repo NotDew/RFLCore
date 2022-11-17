@@ -17,7 +17,7 @@ public class qbModeCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        Player p = (Player)sender;
+        /*Player p = (Player)sender;
         ItemStack ball = new ItemStack(Material.SNOWBALL);
         ItemMeta bmeta = ball.getItemMeta();
         bmeta.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "1 Football");
@@ -40,7 +40,7 @@ public class qbModeCommand implements CommandExecutor {
         p.getInventory().addItem(ball4);
         
 
-
+*/
         return false;
     }
 }

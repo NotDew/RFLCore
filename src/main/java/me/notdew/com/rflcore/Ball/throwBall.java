@@ -24,7 +24,7 @@ public class throwBall implements Listener {
 
     @EventHandler
     public void onThrow(PlayerInteractEvent e) {
-        Player p = e.getPlayer();
+       /* Player p = e.getPlayer();
         if (!(e.getAction() == Action.RIGHT_CLICK_AIR)) return;
         if (!(e.getPlayer().getInventory().getItemInHand().getType() == Material.SNOWBALL)) return;
         e.setCancelled(true);
@@ -79,7 +79,7 @@ public class throwBall implements Listener {
             s.addPassenger(p);
         } else {
             return;
-        }
+        }*/
     }
 }
 

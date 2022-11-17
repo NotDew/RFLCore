@@ -18,7 +18,7 @@ public class snowballLand implements Listener {
 
     @EventHandler
     public void onLand(ProjectileHitEvent e) {
-        if (e.getEntity() instanceof Snowball) {
+        /*if (e.getEntity() instanceof Snowball) {
             if (throwBall.assign.containsKey(e.getEntity())) {
                 if (throwBall.ballp.containsKey(e.getEntity())) {
                     Player p = throwBall.ballp.get(e.getEntity());
@@ -32,11 +32,11 @@ public class snowballLand implements Listener {
 
                 throwBall.assign.get(e.getEntity()).remove();
             }
-        }
+        }*/
     }
     @EventHandler
     public void hitSnowball(EntityDamageByEntityEvent e) {
-        if (!(e.getDamager() instanceof Player)) return;
+        /*if (!(e.getDamager() instanceof Player)) return;
         if (!(e.getEntity() instanceof Slime)) return;
         Player p = (Player)e.getDamager();
         Bukkit.broadcastMessage("CAUGHT! By:" + ((Player) e.getDamager()).getDisplayName());
@@ -52,7 +52,7 @@ public class snowballLand implements Listener {
                 p.setGlowing(false);
             }
 
-        }.runTaskLater(RFLCore.instance, 20*5);
+        }.runTaskLater(RFLCore.instance, 20*5);*/
 
     }
 

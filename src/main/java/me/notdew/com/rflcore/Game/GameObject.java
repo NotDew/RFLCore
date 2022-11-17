@@ -5,10 +5,7 @@ import me.notdew.com.rflcore.Field.FieldCommand;
 import me.notdew.com.rflcore.Field.FieldObject;
 import me.notdew.com.rflcore.RFLCore;
 import me.notdew.com.rflcore.Roster.RosterCommand;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.OfflinePlayer;
-import org.bukkit.World;
+import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
 
@@ -24,13 +21,27 @@ public class GameObject {
     Player cap1;
     Player cap2;
     Player admin;
+    char ball;
+    char homedir;
+    char awaydir;
 
 
     public GameObject(String field, Player p) {
+        ball = 'N';
         fo = FieldCommand.fieldnames.get(field);
+        homedir = fo.getHomeOffenseDirection();
+        awaydir = fo.getAwayOffenseDirection();
         p.sendMessage(ChatColor.GREEN + "Do /startgame team1 team2");
 
 
+    }
+
+
+    public Location moveOffense(int yards) {
+        return null;
+    }
+    public Location moveDefense(int yards) {
+        return null;
     }
 
     public void startGame(String team1, String team2, List<String> roster1, List<String> roster2, Player admin) {
@@ -93,6 +104,8 @@ public class GameObject {
 
 
         admin.sendMessage(cap1.getName() + "|" + cap2.getName());
+
+        ball = 'H';
 
 
 

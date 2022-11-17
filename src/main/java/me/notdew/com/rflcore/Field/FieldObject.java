@@ -28,6 +28,14 @@ public class FieldObject {
     public CuboidRegion getRegion() {return region;}
 
 
+    public char getAwayOffenseDirection() {
+        return 'N';
+    }
+    public char getHomeOffenseDirection() {
+        return 'S';
+    }
+
+
     public CuboidRegion getAway() {
         if (e1.equals("away") || e2.equals("away")) {
             if (e1.equals("away")) {

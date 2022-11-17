@@ -11,7 +11,7 @@ public class putBall implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         Player p = (Player)sender;
-        KickingCommand.ballplayer.get(p).spawnBall(p.getLocation());
+        //KickingCommand.ballplayer.get(p).spawnBall(p.getLocation());
 
         return false;
     }

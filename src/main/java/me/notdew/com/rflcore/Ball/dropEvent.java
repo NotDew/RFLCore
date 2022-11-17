@@ -19,7 +19,7 @@ public class dropEvent implements Listener {
 
     @EventHandler
     public void onDrop(PlayerDropItemEvent e) {
-        Player p = e.getPlayer();
+        /*Player p = e.getPlayer();
         Item ball = e.getItemDrop();
 
         if (ball.getItemStack().getType().equals(Material.SNOWBALL)) {
@@ -42,7 +42,7 @@ public class dropEvent implements Listener {
 
             }
 
-        }
+        }*/
 
 
 
@@ -51,7 +51,7 @@ public class dropEvent implements Listener {
 
     @EventHandler
     public void itemSwitch(PlayerItemHeldEvent e) {
-        Player p = e.getPlayer();
+        /*Player p = e.getPlayer();
         ItemStack ball = new ItemStack(Material.SNOWBALL);
         ItemMeta bmeta = ball.getItemMeta();
         bmeta.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "1 Football");
@@ -87,7 +87,7 @@ public class dropEvent implements Listener {
             lvl.put(p, 4);
         }
 
-
+*/
 
     }
     public static int getTotalExperience(int level) {
@@ -135,8 +135,8 @@ public class dropEvent implements Listener {
     }
     @EventHandler
     public void onJoin(PlayerJoinEvent e){
-        lvl.put(e.getPlayer(), 1);
-        setTotalExperience(e.getPlayer(), 7);
+        //lvl.put(e.getPlayer(), 1);
+        //setTotalExperience(e.getPlayer(), 7);
 
 
     }
